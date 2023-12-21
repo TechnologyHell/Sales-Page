@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('items/bg.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+nav {
+    background-color: #f0f0f0b4;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    background-color: #ff0000; 
+    margin-right: 40px; 
+    border-radius: 50px;
+    width: 80px;
+}
+
+#product-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+   
+}
+
+.gallery-desc{
+    border: 2px solid black;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#gallery-container {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    
+    border: 2px solid black;
+    
+}
+
+#photo-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#prev-btn,
+#next-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+#gallery-preview {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#main-image {
+    width: 500px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgba(255, 144, 222, 0.226); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#main-image:hover{
+    box-shadow: 0 0 10px 5px rgba(255, 144, 222, 0.6);
+}
+
+#main-video {
+    width: 500px; 
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 15px;
+    box-shadow: 0 0 10px 5px rgba(255, 144, 222, 0.226); 
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#main-video:hover{
+    box-shadow: 0 0 10px 5px rgba(255, 144, 222, 0.6);
+}
+
+.thumbnail {
+    width: 50px; 
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.thumbnail:hover{
+    transform: scale(1.1);
+}
+
+.thumbnail.highlight {
+    border: 3px solid #e100ffb0; 
+}
+
+#thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#next-btn {
+    align-self: flex-end;
+}
+
+.prod-h {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.prod-h img{
+    max-width: 80px;
+}
