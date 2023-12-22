@@ -1,10 +1,18 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('items/bg.jpg'); 
     background-size: cover; 
     background-position: center;
+}
+
+@media (max-width: 720px){
+    #product-items{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 nav {
@@ -40,24 +48,25 @@ nav a {
     align-items: center;
     justify-content: center;
     padding-top: 5%;
-   
 }
 
 .gallery-desc{
-    border: 2px solid black;
-    width: 30%;
+
+    width: 35%;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 20px;
 }
 
-#gallery-container {
+.gallery-container {
     display: flex;
-    width: 30%;
-    margin: auto;
+    width: auto;
+    padding-right: 3%;
+    padding-left: 10%;
     flex-direction: column;
     align-items: center;
-    
-    border: 2px solid black;
+    scale: 1.05;
+
     
 }
 
@@ -138,12 +147,195 @@ nav a {
     align-self: flex-end;
 }
 
+.price-container {
+    display: flex;
+    align-items: center;
+}
+
+.price-container p, .price-container big  {
+    margin: 0px; 
+}
+
+.price-container small{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+
 .prod-h {
     display: flex;
     align-items: center;
     justify-content: left;
+    padding-left: 20px;
 }
 
 .prod-h img{
     max-width: 80px;
+    padding-right: 18px;
+}
+
+.variations{
+    padding-left: 10px;
+}
+.variations img{
+    border-radius: 100px;
+}
+.variant{
+    max-width: 80px;
+    transition: transform 0.3s ease-in-out;
+
+}
+.variant:hover{
+    transform: scale(1.1);
+}
+.ship-box{
+
+    width: 250px;
+    margin-right: 150px;
+    background-color: #e4e4e425;
+    border-radius: 20px;
+    box-shadow: 
+        3px 3px 5px #888888cb, 
+        -3px -3px 5px #ffffffbd; 
+    padding: 10px;
+}
+
+.shipping-input-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#freed{
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #0051ff; /* Text color */
+    text-shadow: 0 0 10px #ffc74e, 0 0 20px #ffb8df, 0 0 30px #ffffff79;
+}
+
+#pincode {
+    max-width: 100px;
+    padding: 8px;
+    border: 1px solid #fff3fa3f;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+    outline: none;
+    text-align: center;
+}
+
+#pincode::placeholder {
+    color: #aaa;
+    text-align: center;
+}
+
+#pinbtn{
+    text-align: center;
+    padding: 8px;
+    padding-right: 12px;
+    background-color: #292dff9c;
+    color: #fff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#pinbtn:hover {
+    background-color: #0056b3;
+}
+
+
+.stock{
+    font-weight: 500;
+    color: green;
+    font-size: 25px;
+    text-align: center;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#qtybtn{
+    text-align: center;
+    padding: 8px;
+    padding-right: 12px;
+    background-color: #292dff9c;
+    color: #fff;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+select {
+    max-width: 100px;
+    padding: 8px;
+    border: 1px solid #ffe9fa91;
+    border-radius: 0 20px 20px 0;
+    font-size: 16px;
+    outline: none;
+}
+
+select:hover {
+    border-color: #5900ff69;
+}
+
+#product-price{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.bmsm{
+    text-align: center;
+    font-size: 14px;
+}
+
+.sharebox {
+    text-align: center;
+    padding: 10px;
+}
+
+#sharebtn {
+    width: 100%;
+    height: 40px;
+    background-color: #1900ff73;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#sharebtn:hover {
+    background-color: #0300b391;
+}
+
+.buybtn {
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.buybtn button {
+    width: 100%;
+    height: 40px;
+    background-color: #00ffc8af;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buybtn button:hover {
+    background-color: #218838;
 }
