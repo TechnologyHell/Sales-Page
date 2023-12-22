@@ -7,6 +7,10 @@
         <title>YouTube Play Button</title>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-dfESxMKkAyD2F/1fHY5sp29vU9UVTJ+GwNM8HbF8A+vtBtMNQ4q6bYqqXQxVIHDI" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
     </head>
 
 
@@ -21,41 +25,115 @@
             </div>
         </nav>
         
-        <div class="product">
+        <div id="product-items">
 
-            <div id="gallery-container">
-            <div id="gallery-preview">             
-                <img id="main-image" src="replica/0.jpg" alt="Main Image">
-                <video id="main-video" autoplay loop style="display: none;">
-                    <source src="replica/trailer_sq.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                 </video>
-            </div>
-            <div id="thumbnail-container">
-                <div id="photo-controls">
-                    <button id="prev-btn" onclick="showPrev()">❮</button>
+            <div class="gallery-container">
+                <div id="gallery-preview">             
+                    <img id="main-image" src="replica/0.jpg" alt="Main Image">
+                    <video id="main-video" autoplay loop style="display: none;">
+                        <source src="replica/trailer_sq.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-                    <img class="thumbnail" src="replica/0.jpg" alt="Thumbnail 0" onclick="showImage('replica/0.jpg')">
-                    <img class="thumbnail" src="replica/1.jpg" alt="Thumbnail 1" onclick="showImage('replica/1.jpg')">
-                    <img class="thumbnail" src="replica/2.jpg" alt="Thumbnail 2" onclick="showImage('replica/2.jpg')">
-                    <img class="thumbnail" src="replica/3.jpg" alt="Thumbnail 3" onclick="showImage('replica/3.jpg')">
-                    <img class="thumbnail" src="replica/4.jpg" alt="Thumbnail 4" onclick="showImage('replica/4.jpg')">
-                    <img class="thumbnail" src="replica/5.jpg" alt="Thumbnail 5" onclick="showImage('replica/5.jpg')">
-                <video class="thumbnail" onclick="showVideo('replica/trailer_sq.mp4')">
-                    <source src="replica/trailer_sq.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div id="photo-controls">
-                    <button id="next-btn" onclick="showNext()">❯</button>
+                <div id="thumbnail-container">
+                    <div id="photo-controls">
+                        <button id="prev-btn" onclick="showPrev()">❮</button>
+                    </div>
+                        <img class="thumbnail" src="replica/0.jpg" alt="Thumbnail 0" onclick="showImage('replica/0.jpg')">
+                        <img class="thumbnail" src="replica/1.jpg" alt="Thumbnail 1" onclick="showImage('replica/1.jpg')">
+                        <img class="thumbnail" src="replica/2.jpg" alt="Thumbnail 2" onclick="showImage('replica/2.jpg')">
+                        <img class="thumbnail" src="replica/3.jpg" alt="Thumbnail 3" onclick="showImage('replica/3.jpg')">
+                        <img class="thumbnail" src="replica/4.jpg" alt="Thumbnail 4" onclick="showImage('replica/4.jpg')">
+                        <img class="thumbnail" src="replica/5.jpg" alt="Thumbnail 5" onclick="showImage('replica/5.jpg')">
+                    <video class="thumbnail" onclick="showVideo('replica/trailer_sq.mp4')">
+                        <source src="replica/trailer_sq.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div id="photo-controls">
+                        <button id="next-btn" onclick="showNext()">❯</button>
+                    </div>
                 </div>
-            </div>
             </div>
 
             <div class="gallery-desc">
-                <h1>YouTube Play Button</h1>
+                <h1>YouTube Play Button | Customisable Creator Award | Handicrafted 100% Authentic Premium Finish Decorative or Gift Item</h1>
+                <p><s>M.R.P.: ₹999</s></p>
+                <div class="price-container">
+                    <big><h1>₹ 899.00 INR</h1></big>
+                    <small>Inclusive of all taxes</small>
+                </div>
+                
+                <hr>
+                <div class="prod-h">
+                    <img src="icons/01.png">
+                    <img src="icons/02.png">
+                    <img src="icons/03.png">
+                    <img src="icons/04.png">
+                    <img src="icons/05.png">
+                </div>
+                <hr>
+                <div class="variations">
+                    <h4>Variations</h4>
+                    <img class="variant" src="replica/0.jpg" alt="Silver Play Button" onclick="showImage('replica/0.jpg')">
+                    <img class="variant" src="replica/1.jpg" alt="Gold Play Button" onclick="showImage('replica/1.jpg')">
+                </div>
+                
+                <hr>
+
+                
+
             </div>
 
+            <div class="ship-box">
+
+                <p id="freed">Free Delivery Across India</p>
+
+                <div class="shipping-input-container">
+                    <input type="text" id="pincode" name="pincode" placeholder="Pincode">
+                    <button id="pinbtn" onclick="getShippingDate()">Submit</button>
+                </div>
+
+                <center><p><span id="shipping-date"></span></p></center>
+
+                <div class="stock">
+                    <p>In Stock</p>
+                </div>
+
+                <small>
+                    <center><p>Sold by <a href="https://www.etsy.com/shop/technologyhell/?etsrc=sdt">TechnologyHell</a><br>Fulfilled by <a href="https://www.indiapost.gov.in/_layouts/15/dop.portal.tracking/trackconsignment.aspx">IndiaPost</a></p></center>
+                </small>
+                <br>
+                <div class="quantity-container">
+                    <label id="qtybtn" for="quantity">Quantity:</label>
+                    <select id="quantity" name="quantity" onchange="updatePrice()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+  
+                <big><div id="product-price"><big>₹ 899</big></div></big>
+                <p class="bmsm"><i>Buy More Save More!</i></p><br>
+                
+                <div class="buybtn">
+                    <button>Buy Now</button>
+                </div>
+                <div class="sharebox">
+                    <button id="sharebtn" onclick="shareContent()">Share</button>
+                </div>
+                
+
+
+            </div>
+            
         </div>
+
+        <!--
+        <p>Elevate your space with our Handmade YouTube Play Button – a unique tribute to your creative journey. Crafted with care, it's more than decor; it's a celebration of your dedication and success.<br><br>A great gift idea for your loved ones, a small token of appreciation for their efforts.<br><br>Level up your creative space today!</p>
+        -->
 
     </body>
 
