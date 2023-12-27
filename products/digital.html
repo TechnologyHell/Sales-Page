@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>YouTube Play Button</title>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../script.js"></script>
+        <link rel="icon" type="image/x-icon" href="/branding/fc.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-dfESxMKkAyD2F/1fHY5sp29vU9UVTJ+GwNM8HbF8A+vtBtMNQ4q6bYqqXQxVIHDI" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+    </head>
+
+
+    <body>
+        
+        <nav>
+            <div class="nav-left">
+                <a href="/index.html" target="_blank">Home</a>
+                <a href="/pages/products.html" target="_blank">Products</a>
+                <a href="/pages/about.html" target="_blank">About</a>
+                <a href="/pages/contact.html" target="_blank">Contact</a>
+            </div>
+            <div class="nav-right">
+                <a href="https://nitishsingh.pages.dev/" target="_blank"><img src="../branding/daddy_logo.png"></a>
+            </div>
+        </nav>
+        
+        <div id="product-items">
+
+            <div class="gallery-container">
+                <div id="gallery-preview">             
+                    <img id="main-image" src="../products/digital/0.jpg" alt="Main Image">
+                    <video id="main-video" autoplay loop style="display: none;">
+                        <source src="../products/digital/trailer_sq.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="thumbnail-container">
+                    <div id="photo-controls">
+                        <button id="prev-btn" onclick="showPrev()">❮</button>
+                    </div>
+                        <img class="thumbnail" src="../products/digital/0.jpg" alt="Thumbnail 0" onclick="showImage('../products/digital/0.jpg')">
+                        <img class="thumbnail" src="../products/digital/1.jpg" alt="Thumbnail 1" onclick="showImage('../products/digital/1.jpg')">
+                        <img class="thumbnail" src="../products/digital/2.jpg" alt="Thumbnail 2" onclick="showImage('../products/digital/2.jpg')">
+                        <img class="thumbnail" src="../products/digital/3.jpg" alt="Thumbnail 3" onclick="showImage('../products/digital/3.jpg')">
+                        <img class="thumbnail" src="../products/digital/4.jpg" alt="Thumbnail 4" onclick="showImage('../products/digital/4.jpg')">
+                        <img class="thumbnail" src="../products/digital/5.jpg" alt="Thumbnail 5" onclick="showImage('../products/digital/5.jpg')">
+                    <video class="thumbnail" onclick="showVideo('../products/digital/trailer_sq.mp4')">
+                        <source src="../products/digital/trailer_sq.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div id="photo-controls">
+                        <button id="next-btn" onclick="showNext()">❯</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-desc">
+                <h1>YouTube Play Button Digital Design Template | Craft Your Virtual Success | Unleash Your Creativity</h1>
+                <p><s>M.R.P.: ₹999</s></p>
+                <div class="price-container">
+                    <big><h1>₹ 899.00 INR</h1></big>
+                    <small>Inclusive of all taxes</small>
+                </div>
+                
+                <hr>
+                <div class="prod-h">
+                    <img src="../icons/01.png">
+                    <img src="../icons/02.png">
+                    <img src="../icons/03.png">
+                    <img src="../icons/04.png">
+                    <img src="../icons/05.png">
+                </div>
+                <hr>
+                <div class="variations1">
+                    <h4>Variations</h4>
+                    <img class="variant" src="../products/digital/g2.jpg" alt="Gold Play Button">
+                    <img class="variant" src="../products/digital/g1.jpg" alt="Gold Play Button">
+                    <img class="variant" src="../products/digital/s1.jpg" alt="Silver Play Button">   
+                    <img class="variant" src="../products/digital/s2.jpg" alt="Silver Play Button">
+                    
+                </div>
+                
+                <hr>
+
+                
+
+            </div>
+
+            <div class="ship-box">
+
+                <p id="freed">Free Delivery Across India</p>
+
+                <div class="shipping-input-container">
+                    <input type="text" id="pincode" name="pincode" placeholder="Pincode">
+                    <button id="pinbtn" onclick="getShippingDate()">Submit</button>
+                </div>
+
+                <center><p><span id="shipping-date"></span></p></center>
+
+                <div class="stock">
+                    <p>In Stock</p>
+                </div>
+
+                <small>
+                    <center><p>Sold by <a href="https://www.etsy.com/shop/technologyhell/?etsrc=sdt">TechnologyHell</a><br>Fulfilled by <a href="https://www.indiapost.gov.in/_layouts/15/dop.portal.tracking/trackconsignment.aspx">IndiaPost</a></p></center>
+                </small>
+                <br>
+                <div class="quantity-container">
+                    <label id="qtybtn" for="quantity">Quantity:</label>
+                    <select id="quantity" name="quantity" onchange="updatePrice()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                
+  
+                <big><div id="product-price"><big>₹ 899</big></div></big>
+                <p class="bmsm"><i>Buy More Save More!</i></p><br>
+                
+                <div class="buybtn">
+                    <button>Buy Now</button>
+                </div>
+                <div class="sharebox">
+                    <button id="sharebtn" onclick="shareContent()">Share</button>
+                </div>
+                
+
+
+            </div>
+            
+        </div>
+
+        <div id="product-details">
+
+            <div class="quote">
+                <p><i>"Unleash Your Creative Potential with our Play Button Digital Design Template.<br>Craft and customize your own virtual success, turning your digital dreams into stunning visual realities."</i></p>
+            </div>
+
+            <div class="description">
+                <h3>Product Description</h3>
+                <p>Elevate your YouTube journey with our meticulously handcrafted Custom YouTube Play Button Replica. This beautifully designed piece captures the essence of the official YouTube Play Button, seamlessly blending the sturdiness of wood with the delicate allure of glass, creating a unique and captivating showpiece for your achievements.</p>
+
+                <br>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Premium Materials : Our product is constructed with high-quality MDF as its primary base, ensuring strength and durability. </li>
+                    <li>Vivid Color Quality: The print quality is insane, achieving a solid resemblance to the official YouTube Play Button.</li>
+                    <li>Realistic Replica: Our product has been designed to look exactly as same as the official unit.</li>
+                    <li>Customization : Get this customized with your name and number of subscribers.</li>
+                </ul>
+
+                <br>
+                <h3>Reasons to Buy</h3>
+                <ul>
+                    <li>Decorative Item : Can be used as a premium decorative asset which will add a new look to the environment.</li>
+                    <li>Gift Item : You definitely know a close one who might be a YouTube creator, and this can be the best gift for them !</li>
+                    <li>Motivation : Seeing your target everyday will for sure encourage you to work harder and achieve your goal.</li>
+                    <li>Boasting : Get this hanged on your wall, making it a feast for the eyes and an instant conversation starter.</li>
+                </ul>
+
+                <br>
+                <h3>Other Details</h3>
+                <ul>
+                    <li>Dimensions : 20 x 26 x 0.5 (cm)</li>
+                    <li>Handicrafted Product</li>
+                    <li>Delivery from a Small Business in India</li>
+                    <li>Materials : MDF, Glass, Paper</li>
+                </ul>
+
+            </div>
+
+            <div class="more-items"> <!--buy options-->
+                <div class="quote">
+                    <big><p><i>Hurry Up ! Order Now</i></p></big>
+                </div>
+                <div class="b-o">
+                    <div class="buy1">
+                        <div class="buybtn">
+                            <button>Order Directly</button>
+                        </div>
+                    </div>
+                    <div class="buy1">
+                        <div class="buybtn">
+                            <a href="https://technologyhell.etsy.com/in-en/listing/1609736349/youtube-play-button-youtube-creator" target="_main"><button>Order On Etsy</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class=note><p>NOTE : Ordering from Etsy will cost you additional charges (Tax, GST, Etsy Charges, Platform Fees, PayPal Charges etc). For the best price, consider directly ordering from us.</p></div>
+
+            <div class="description">
+                <br><br>
+                <h3>Shipping Information</h3>
+                <ul>
+                    <li>Free Shipping available all over India through IndiaPost.</li>
+                    <li>Global Shipping also available through IndiaPost International. Shipping cost depends on your location.</li>
+                    <li>Faster Shipping available at additional charges.</li>
+                    <li>COD available with a 30% advance payment.</li>
+                </ul>
+                <br><br>
+
+            </div>
+
+        </div>
+
+        <div class="more-items">
+
+            <center><h1>More Similar Products</h1></center>
+
+            <div class="similar-products">
+
+                <a href="#" class="pro-m">
+                        <img src="../products/digital/0.jpg">
+                        <h2>
+                            ₹ 199 INR
+                        </h2>
+                        <h3>
+                        Play Button Custom Design
+                        </h3>
+                    
+                        <p>Get the design customized as per as your needs and let your creativity unleash it's potential !</p>
+   
+                </a>
+
+                <a href="social.html" target="_blank" class="pro-m">
+                    <img src="../products/social/0.jpg">
+                
+                    <h2>
+                        ₹ 499 INR
+                    </h2>
+                    <h3>
+                    Social Media Custom Award
+                    </h3>
+                
+                    <p>Customize and get yourself your favorite social media featured awards. Great idea for a gift!</p>
+
+                </a>
+
+                <a href="framed.html" target="_blank" class="pro-m">
+                    <img src="../products/framed/0.jpg">
+                
+                    <h2>
+                        ₹ 599 INR
+                    </h2>
+                    <h3>
+                    Framed Glass Play Button
+                    </h3>
+                
+                    <p>A premiumly finished glass coated YouTube Play Button, which is unique in it's design.</p>
+
+                </a>
+
+                <a href="replica.html" target="_blank" class="pro-m">
+                    <img src="../products/replica/0.jpg">
+                
+                    <h2>
+                        ₹ 899 INR
+                    </h2>
+                    <h3>
+                    Official Play Button Replica
+                    </h3>
+                
+                    <p>A perfectly made Play Button replica which is indistinguishable from the official variant of the same.</p>
+
+                </a>
+            
+            </div>
+
+        </div>
+
+        <br><br><br>
+        <center><h1>Connect with Us !</h1></center>
+        <div class="connect">
+            
+            <div class="s-btn">
+                <a href="https://www.youtube.com/technologyhell" target="_blank"><img src="/icons/yt.png"></a>
+                <a href="https://technologyhell.etsy.com/" target="_blank"><img src="/icons/et.png"></a>
+                <a href="https://www.instagram.com/technologyhell/" target="_blank"><img src="/icons/ig.png"></a>
+                <a href="https://www.facebook.com/technologyhell/" target="_blank"><img src="/icons/fb.png"></a>
+            </div>
+                
+        </div>
+    
+        <div class="footer">
+            <center><h8>©TechnologyHell 2023 - All Rights Reserved</h8></center>
+        </div>
+
+    </body>
+
+</html>
