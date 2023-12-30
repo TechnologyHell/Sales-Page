@@ -54,7 +54,7 @@ function updateGallery() {
 
 window.addEventListener('load', function () {
     updateGallery();
-    calculateShippingDate(); // Call the function to calculate and display the shipping date on load
+    calculateShippingDate(); 
 });
 
 document.getElementById('next-btn').addEventListener('click', function () {
@@ -73,7 +73,14 @@ document.getElementById('prev-btn').addEventListener('click', function () {
 
 
 function getShippingDate() {
-    var pincode = document.getElementById('pincode').value.trim(); // Trim to remove leading and trailing spaces
+    var pincode = document.getElementById('pincode').value.trim(); 
+
+    var pincodeRegex = /^\d{6}$/;
+    if (!pincodeRegex.test(pincode)) {
+        alert('Please enter a valid 6-digit pincode.');
+        return;
+    }
+    
     if (pincode === '') {
         document.getElementById('shipping-date').innerText = '';
         document.getElementById('shipping-message').style.display = 'none';
@@ -90,7 +97,7 @@ function calculateShippingDate() {
     shippingDate.setDate(today.getDate() + 15); 
 
     var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    var formattedShippingDate = "Guranteed Delivered by \n" + shippingDate.toLocaleDateString('en-US', options);
+    var formattedShippingDate = "Guranteed Delivery \n" + shippingDate.toLocaleDateString('en-US', options);
 
     return formattedShippingDate;
 }
